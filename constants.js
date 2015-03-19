@@ -58,15 +58,25 @@ var csts = {
   CLUSTER_MODE_ID        : 'cluster_mode',
   FORK_MODE_ID           : 'fork_mode',
 
-  KEYMETRICS_ROOT_URL    : 'root.keymetrics.io',
+  // KEYMETRICS_ROOT_URL    : 'root.keymetrics.io',
 
-  DEFAULT_MODULE_JSON    : 'package.json',
+  // DEFAULT_MODULE_JSON    : 'package.json',
 
-  REMOTE_PORT_TCP        : 80,
-  REMOTE_PORT            : 41624,
-  REMOTE_REVERSE_PORT    : 43554,
-  REMOTE_HOST            : 's1.keymetrics.io',
-  SEND_INTERVAL          : 1000
+  // REMOTE_PORT_TCP        : 80,
+  // REMOTE_PORT            : 41624,
+  // REMOTE_REVERSE_PORT    : 43554,
+  // REMOTE_HOST            : 's1.keymetrics.io',
+  // SEND_INTERVAL          : 1000
+
+  KEYMETRICS_ROOT_URL : 'root.pm25.io',
+
+  DEFAULT_MODULE_JSON : 'package.json',
+
+  REMOTE_PORT_TCP : 80,
+  REMOTE_PORT : 41624,
+  REMOTE_REVERSE_PORT : 43554,
+  REMOTE_HOST : 's1.pm25.io',
+  SEND_INTERVAL : 1000
 };
 
 /**
