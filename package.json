@@ -1,5 +1,5 @@
 {
-  "name": "pm25",
+  "name": "pm2.5",
   "preferGlobal": "true",
   "version": "0.0.1",
   "engines": {
