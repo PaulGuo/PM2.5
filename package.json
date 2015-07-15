@@ -1,7 +1,7 @@
 {
   "name": "pm25",
   "preferGlobal": "true",
-  "version": "0.143.2",
+  "version": "0.143.3",
   "engines": {
     "node": ">=0.10"
   },
@@ -74,45 +74,41 @@
     "dev ops"
   ],
   "bin": {
-    "pm25"    : "./bin/pm2",
+    "pm25": "./bin/pm2",
     "pm25-dev": "./bin/pm2-dev"
   },
   "dependencies": {
-    "async"               : "1.2.1",
-    "chalk"               : "1.0.0",
-    "chokidar"            : "^1.0.0",
-    "cli-table"           : "0.3.1",
-    "coffee-script"       : "1.9.3",
-    "colors"              : "1.1.0",
-    "commander"           : "2.8.1",
-    "cron"                : "1.0.9",
-    "debug"               : "2.2.0",
-    "eventemitter2"       : "0.4.14",
-    "moment"              : "2.10.3",
-    "nssocket"            : "0.5.3",
-    "pidusage"            : "0.1.1",
-
-    "pmx"                 : "latest",
-    "vizion"              : "latest",
-
-    "pm2-axon"            : "latest",
-    "pm2-axon-rpc"        : "0.3.6",
-    "pm2-deploy"          : "latest",
-    "pm2-multimeter"      : "0.1.2",
-    "safe-clone-deep"     : "1.0.5",
-
-    "babel"               : "^5.x",
-    "is-iojs"             : "1.1.0",
-
-    "shelljs"             : "0.5.1",
-    "isbinaryfile"        : "^2.0.3",
-    "semver"              : "4.3.6"
+    "async": "1.2.1",
+    "chalk": "1.0.0",
+    "chokidar": "^1.0.0",
+    "cli-table": "0.3.1",
+    "coffee-script": "1.9.3",
+    "colors": "1.1.0",
+    "commander": "2.8.1",
+    "cron": "1.0.9",
+    "debug": "2.2.0",
+    "eventemitter2": "0.4.14",
+    "moment": "2.10.3",
+    "nssocket": "0.5.3",
+    "pidusage": "0.1.1",
+    "pmx": "latest",
+    "vizion": "latest",
+    "pm2-axon": "latest",
+    "pm2-axon-rpc": "0.3.6",
+    "pm2-deploy": "latest",
+    "pm2-multimeter": "0.1.2",
+    "safe-clone-deep": "1.0.5",
+    "babel": "^5.x",
+    "is-iojs": "1.1.0",
+    "shelljs": "0.5.1",
+    "isbinaryfile": "^2.0.3",
+    "semver": "4.3.6"
   },
   "devDependencies": {
-    "mocha"           : "^1.20.1",
-    "should"          : "^4.0.0",
-    "better-assert"   : "^1.0.0",
-    "punt"            : "*"
+    "mocha": "^1.20.1",
+    "should": "^4.0.0",
+    "better-assert": "^1.0.0",
+    "punt": "*"
   },
   "optionalDependencies": {
     "pm2-logs": "~0.1.1",
