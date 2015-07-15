@@ -26,6 +26,7 @@ SEND_INTERVAL : 1000
 
 ```
 [Keymetrics.io] -> [PM25.io]
+PM2: Keymetrics.io Agent -> PM2: PM25.io Agent
 ```
 
 ##### README 文案信息更改
