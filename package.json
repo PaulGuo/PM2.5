@@ -1,7 +1,7 @@
 {
   "name": "pm25",
   "preferGlobal": "true",
-  "version": "0.143.0",
+  "version": "0.143.1",
   "engines": {
     "node": ">=0.10"
   },
@@ -11,90 +11,23 @@
     "example": "./examples"
   },
   "author": {
-    "name": "Strzelewicz Alexandre",
-    "email": "as@unitech.io",
-    "url": "https://keymetrics.io"
+    "name": "GuoKai",
+    "email": "badkaikai@gmail.com",
+    "url": "http://pm25.io"
   },
   "maintainers": [
     {
-      "name": "tknew",
-      "email": "strzelewicz.alexandre@gmail.com"
-    },
-    {
-      "name": "soyuka",
-      "email": "soyuka@gmail.com"
-    },
-    {
-      "name": "rlidwka",
-      "email": "alex@kocharin.ru"
-    },
-    {
-      "name": "achingbrain",
-      "email": "alex@achingbrain.net"
-    },
-    {
-      "name": "jshkurti",
-      "email": "jonishkurti90@gmail.com"
-    },
-    {
-      "name": "tjatse",
-      "email": "thisnamemeansnothing@gmail.com"
+      "name": "GuoKai",
+      "email": "badkaikai@gmail.com"
     }
   ],
   "contributors": [
     {
-      "name": "Alex Kocharin",
-      "email": "alex@kocharin.ru"
-    },
-    {
-      "name": "Soyuka",
-      "email": "soyuka@gmail.com"
-    },
-    {
-      "name": "Joni Shkurti",
-      "email": "jonishkurti90@gmail.com"
-    },
-    {
-      "name": "James Ide"
-    },
-    {
-      "name" : "Jun Tjatse",
-      "email" : "thisnamemeansnothing@gmail.com"
-    },
-    {
-      "name": "Xu Jingxin",
-      "email": "sailxjx@gmail.com"
-    },
-    {
-      "name": "Ben Postlethwaite",
-      "email": "post.ben.here@gmail.com"
-    },
-    {
-      "name": "Devo.ps",
-      "email": "contact@devo.ps"
-    },
-    {
-      "name": "Bret Copeland",
-      "email": "bret@atlantisflight.org"
-    },
-    {
-      "name": "John Hurliman",
-      "email": "jhurliman@jhurliman.org"
-    },
-    {
-      "name": "TruongSinh Tran-Nguyen",
-      "email": "i@truongsinh.pro"
-    },
-    {
-      "name": "Michael Hueuberger",
-      "email": "michael.heuberger@binarykitchen.com"
-    },
-    {
-      "name:": "Chris Wiggins",
-      "email": "chris@chriswiggins.co.nz"
+      "name": "GuoKai",
+      "email": "badkaikai@gmail.com"
     }
   ],
-  "homepage": "https://github.com/Unitech/pm2",
+  "homepage": "https://github.com/PaulGuo/PM2.5",
   "description": "Production process manager for Node.JS applications with a built-in load balancer.",
   "main": "index.js",
   "scripts": {
@@ -141,8 +74,8 @@
     "dev ops"
   ],
   "bin": {
-    "pm2"    : "./bin/pm2",
-    "pm2-dev": "./bin/pm2-dev"
+    "pm25"    : "./bin/pm2",
+    "pm25-dev": "./bin/pm2-dev"
   },
   "dependencies": {
     "async"               : "1.2.1",
@@ -186,11 +119,11 @@
     "ikt": "git+http://ikt.pm2.io/ikt.git#master"
   },
   "bugs": {
-    "url": "https://github.com/Unitech/pm2/issues"
+    "url": "https://github.com/PaulGuo/PM2.5/issues"
   },
   "repository": {
     "type": "git",
-    "url": "git://github.com/Unitech/pm2.git"
+    "url": "git://github.com/PaulGuo/PM2.5.git"
   },
   "license": "AGPL-3.0"
 }
