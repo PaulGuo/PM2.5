@@ -28,6 +28,15 @@ SEND_INTERVAL : 1000
 [Keymetrics.io] -> [PM25.io]
 ```
 
+##### README 文案信息更改
+
+```
+pm2 -> pm25
+PM2 -> PM25
+Keymetrics -> PM25
+Unitech/PM2 -> PaulGuo/PM2.5
+```
+
 ##### 改动文件列表
 
 - `constants.js`
@@ -36,3 +45,4 @@ SEND_INTERVAL : 1000
 - `bin/pm2`
 - `lib/Interactor/Daemon.js`
 - `lib/Interactor/InteractorDaemonizer.js`
+- `README.md`
