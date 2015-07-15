@@ -22,6 +22,10 @@ $pm2 install pm2-probe
 spec "Should install a module"
 should 'should app be online' 'online' 1
 
+$pm2 install pm2-probe
+spec "Should update a module"
+should 'should app be online' 'online' 1
+
 ls ~/.pm2/node_modules/pm2-probe
 spec "Module should be installed"
 
@@ -29,9 +33,7 @@ spec "Module should be installed"
 # Should configuration variable be present two times
 # one time in the raw env, and a second time prefixed with the module name
 #
-OUT=`$pm2 prettylist | grep -o "config1xxx" | wc -l`
-[ $OUT -eq 2 ] || fail "$1"
-success "$1"
+should 'should have config variable' 'config1xxx' 5
 
 $pm2 update
 spec "Should update succesfully"

@@ -26,8 +26,9 @@ var csts = {
   PM2_CONF_FILE          : p.join(PM2_ROOT_PATH, 'conf.js'),
   PM2_MODULE_CONF_FILE   : p.join(PM2_ROOT_PATH, 'module_conf.json'),
 
+  BABEL_EXEC_PATH        : p.join(__dirname, 'node_modules', 'babel', 'bin', 'babel-node'),
+
   CODE_UNCAUGHTEXCEPTION : 100,
-  CONCURRENT_ACTIONS     : 1,
   PREFIX_MSG             : chalk.green('[PM2] '),
   PREFIX_MSG_ERR         : chalk.red('[PM2][ERROR] '),
   PREFIX_MSG_MOD         : chalk.green('[PM2][Module] '),
@@ -58,25 +59,15 @@ var csts = {
   CLUSTER_MODE_ID        : 'cluster_mode',
   FORK_MODE_ID           : 'fork_mode',
 
-  // KEYMETRICS_ROOT_URL    : 'root.keymetrics.io',
+  KEYMETRICS_ROOT_URL    : process.env.KEYMETRICS_NODE || 'root.keymetrics.io',
 
-  // DEFAULT_MODULE_JSON    : 'package.json',
+  DEFAULT_MODULE_JSON    : 'package.json',
 
-  // REMOTE_PORT_TCP        : 80,
-  // REMOTE_PORT            : 41624,
-  // REMOTE_REVERSE_PORT    : 43554,
-  // REMOTE_HOST            : 's1.keymetrics.io',
-  // SEND_INTERVAL          : 1000
-
-  KEYMETRICS_ROOT_URL : 'root.pm25.io',
-
-  DEFAULT_MODULE_JSON : 'package.json',
-
-  REMOTE_PORT_TCP : 8080,
-  REMOTE_PORT : 41624,
-  REMOTE_REVERSE_PORT : 43554,
-  REMOTE_HOST : 's1.pm25.io',
-  SEND_INTERVAL : 1000
+  REMOTE_PORT_TCP        : isNaN(parseInt(process.env.KEYMETRICS_PUSH_PORT)) ? 80 : parseInt(process.env.KEYMETRICS_PUSH_PORT),
+  REMOTE_PORT            : 41624,
+  REMOTE_REVERSE_PORT    : isNaN(parseInt(process.env.KEYMETRICS_REVERSE_PORT)) ? 43554 : parseInt(process.env.KEYMETRICS_REVERSE_PORT),
+  REMOTE_HOST            : 's1.keymetrics.io',
+  SEND_INTERVAL          : 1000
 };
 
 /**
@@ -84,7 +75,8 @@ var csts = {
  */
 var default_conf = util._extend({
   PM2_ROOT_PATH: PM2_ROOT_PATH,
-  WORKER_INTERVAL: process.env.PM2_WORKER_INTERVAL || 30000
+  WORKER_INTERVAL: process.env.PM2_WORKER_INTERVAL || 30000,
+  KILL_TIMEOUT: process.env.PM2_KILL_TIMEOUT || 800
 }, require('./lib/samples/sample-conf.js')(PM2_ROOT_PATH));
 
 /**

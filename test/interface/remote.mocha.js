@@ -86,14 +86,12 @@ function createMockServer(cb) {
 function startSomeApps(cb) {
   setTimeout(function() {
     cmd_pm2.connect(function() {
-      cmd_pm2.start('./test/fixtures/child.js', {instances : 4, name : 'child'}, function() {
-        return setTimeout(cb, 200);
-      });
+      cmd_pm2.start('./test/fixtures/child.js', {instances : 4, name : 'child'}, cb);
     });
   }, 500);
 }
 
-describe('Test remote PM2 actions', function() {
+describe('REMOTE PM2 ACTIONS', function() {
   var server;
   var interactor;
   var pm2;
@@ -106,7 +104,8 @@ describe('Test remote PM2 actions', function() {
       fs.unlinkSync(cst.INTERACTION_CONF);
 
       pm2.kill();
-      done();
+
+      pm2.on('exit', function() {done()});
     });
   });
 
@@ -137,7 +136,9 @@ describe('Test remote PM2 actions', function() {
     send_cmd.emit('cmd', { _type : 'ask' });
   });
 
-
+  /**
+   * PM2 agent is now identified
+   */
   it('should act on PM2', function(done) {
     send_cmd.once('trigger:pm2:result', function(pck) {
 
