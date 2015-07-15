@@ -390,15 +390,15 @@ commander.command('unset <key>')
 //
 function interact(secret_key, public_key, machine) {
   if (secret_key == 'stop' || secret_key == 'kill') {
-    console.log(chalk.cyan('[Keymetrics.io]') + ' Stopping agent...');
+    console.log(chalk.cyan('[PM25.io]') + ' Stopping agent...');
     CLI.killInteract(function() {
-      console.log(chalk.cyan('[Keymetrics.io]') + ' Stopped');
+      console.log(chalk.cyan('[PM25.io]') + ' Stopped');
       return process.exit(cst.SUCCESS_EXIT);
       });
       return false;
     }
     if (secret_key == 'info') {
-      console.log(chalk.cyan('[Keymetrics.io]') + ' Getting agent information...');
+      console.log(chalk.cyan('[PM25.io]') + ' Getting agent information...');
       return CLI.infoInteract();
     }
     if (secret_key == 'delete') {
@@ -406,10 +406,10 @@ function interact(secret_key, public_key, machine) {
         try {
           fs.unlinkSync(cst.INTERACTION_CONF);
         } catch(e) {
-          console.log(chalk.cyan('[Keymetrics.io]') + ' No interaction config file found');
+          console.log(chalk.cyan('[PM25.io]') + ' No interaction config file found');
           return process.exit(cst.SUCCESS_EXIT);
         }
-        console.log(chalk.cyan('[Keymetrics.io]') + ' Agent interaction ended');
+        console.log(chalk.cyan('[PM25.io]') + ' Agent interaction ended');
         return process.exit(cst.SUCCESS_EXIT);
       });
       return false;
@@ -417,7 +417,7 @@ function interact(secret_key, public_key, machine) {
     if (secret_key == 'start' || secret_key == 'restart')
       return CLI.interact(null, null, null);
     if (secret_key && !public_key) {
-      console.error(chalk.cyan('[Keymetrics.io]') + ' Command [%s] unknown or missing public key', secret_key);
+      console.error(chalk.cyan('[PM25.io]') + ' Command [%s] unknown or missing public key', secret_key);
       return process.exit(cst.ERROR_EXIT);
     }
     return CLI.interact(secret_key, public_key, machine);

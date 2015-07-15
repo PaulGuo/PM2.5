@@ -22,8 +22,17 @@ SEND_INTERVAL : 1000
 包名称、版本号、BIN路径
 ```
 
+##### [Keymetrics.io] 提示文案批量替换
+
+```
+[Keymetrics.io] -> [PM25.io]
+```
+
 ##### 改动文件列表
 
 - `constants.js`
 - `lib/Interactor/Daemon.js`
 - `package.json`
+- `bin/pm2`
+- `lib/Interactor/Daemon.js`
+- `lib/Interactor/InteractorDaemonizer.js`
