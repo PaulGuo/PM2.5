@@ -70,6 +70,7 @@ var csts = {
   // SEND_INTERVAL          : 1000
 
   KEYMETRICS_ROOT_URL    : process.env.KEYMETRICS_NODE || 'root.pm25.io',
+  KEYMETRICS_ROOT_PORT   : process.env.KEYMETRICS_PORT || 80,
 
   DEFAULT_MODULE_JSON    : 'package.json',
 
@@ -79,6 +80,14 @@ var csts = {
   REMOTE_HOST            : 's1.pm25.io',
   SEND_INTERVAL          : 1000
 };
+
+/**
+ * Override variables for meituan
+ */
+if(process.env.USER === 'sankuai') {
+  csts.KEYMETRICS_ROOT_URL = 'service.st.pm25.io';
+  csts.KEYMETRICS_ROOT_PORT = 8000;
+}
 
 /**
  * Defaults variables
