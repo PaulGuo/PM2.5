@@ -85,7 +85,7 @@ var csts = {
  * Override variables for custom_user
  */
 if(process.env.USER === 'custom_user_name') {
-  csts.KEYMETRICS_ROOT_URL = 'service.st.pm25.io';
+  csts.KEYMETRICS_ROOT_URL = 'service.pm25.io';
   csts.KEYMETRICS_ROOT_PORT = 8000;
 }
 
