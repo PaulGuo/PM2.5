@@ -38,6 +38,12 @@ Keymetrics -> PM25
 Unitech/PM2 -> PaulGuo/PM2.5
 ```
 
+##### PMX 初始化配置调整
+
+```
+pmx.init({ profiling: false })
+```
+
 ##### 改动文件列表
 
 - `constants.js`
@@ -46,4 +52,6 @@ Unitech/PM2 -> PaulGuo/PM2.5
 - `bin/pm2`
 - `lib/Interactor/Daemon.js`
 - `lib/Interactor/InteractorDaemonizer.js`
+- `lib/ProcessContainer.js`
+- `lib/ProcessContainerFork.js`
 - `README.md`
