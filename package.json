@@ -1,7 +1,7 @@
 {
   "name": "pm25",
   "preferGlobal": "true",
-  "version": "0.143.6",
+  "version": "0.143.7",
   "engines": {
     "node": ">=0.10"
   },
@@ -91,11 +91,11 @@
     "moment": "2.10.3",
     "nssocket": "0.5.3",
     "pidusage": "0.1.1",
-    "pmx": "latest",
-    "vizion": "latest",
-    "pm2-axon": "latest",
+    "pmx": "0.6.2",
+    "vizion": "0.2.13",
+    "pm2-axon": "3.0.1",
     "pm2-axon-rpc": "0.3.6",
-    "pm2-deploy": "latest",
+    "pm2-deploy": "0.3.1",
     "pm2-multimeter": "0.1.2",
     "safe-clone-deep": "1.0.5",
     "babel": "^5.x",
